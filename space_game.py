@@ -2,6 +2,7 @@ import sys
 
 import pygame
 
+from events import PLAYER_TIMER
 from hud import Hud
 from player import Player
 from settings import Settings
@@ -23,6 +24,8 @@ class SpaceGame:
         self.player = Player(self)
         self.hud = Hud(self)
 
+        pygame.time.set_timer(PLAYER_TIMER, 250)
+
     def run(self):
         while True:
             self._check_events()
@@ -42,6 +45,8 @@ class SpaceGame:
                 self._check_keydown_events(event.key)
             elif event.type == pygame.KEYUP:
                 self._check_keyup_events(event.key)
+            elif event.type == PLAYER_TIMER:
+                self.player.timed_update()
 
     def _check_keydown_events(self, key):
         if key == pygame.K_UP:
@@ -52,6 +57,8 @@ class SpaceGame:
             self.player.mov_r = True
         elif key == pygame.K_LEFT:
             self.player.mov_l = True
+        elif key == pygame.K_LSHIFT:
+            self.player.mov_b = True
 
     def _check_keyup_events(self, key):
         if key == pygame.K_UP:
@@ -62,3 +69,5 @@ class SpaceGame:
             self.player.mov_r = False
         elif key == pygame.K_LEFT:
             self.player.mov_l = False
+        elif key == pygame.K_LSHIFT:
+            self.player.mov_b = False
