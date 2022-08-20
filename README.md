@@ -24,6 +24,10 @@ player must learn to cope with each.
   slowest in the reverse (down). Lateral movement (side-to-side) is 
   somewhere in between. The player should also be able to activate booster 
   jets that allow quick burst movement in a single direction.
+- **Energy** - The player has a reserve of energy used by his ship. This 
+  energy is consumed based on the use of boosters, abilities and weapons. 
+  Different subsystems consume energy at different rates. The player must 
+  learn to manage his energy economy to be effective.
 
 ## Limitation
 
