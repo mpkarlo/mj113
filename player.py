@@ -24,6 +24,10 @@ class Player:
         self.mov_u = False
         self.mov_d = False
 
+        # Store player data
+        self.health = 100.0
+        self.energy = 100.0
+
     def draw(self):
         self.screen.blit(self.image, self.rect)
 

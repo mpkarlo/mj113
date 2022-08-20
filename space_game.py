@@ -2,6 +2,7 @@ import sys
 
 import pygame
 
+from hud import Hud
 from player import Player
 from settings import Settings
 
@@ -20,13 +21,16 @@ class SpaceGame:
         pygame.display.set_caption('MJ 113 - Space Game')
 
         self.player = Player(self)
+        self.hud = Hud(self)
 
     def run(self):
         while True:
             self._check_events()
             self.screen.fill(self.settings.bg_color)
             self.player.update()
+            self.hud.update()
             self.player.draw()
+            self.hud.draw()
             pygame.display.flip()
 
     def _check_events(self):
