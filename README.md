@@ -28,6 +28,13 @@ player must learn to cope with each.
   energy is consumed based on the use of boosters, abilities and weapons. 
   Different subsystems consume energy at different rates. The player must 
   learn to manage his energy economy to be effective.
+- **Enemy** - The enemy of the player is a rogue space station that sits at 
+  the center top of the screen. The player must deactivate the different 
+  defense systems in order to make it vulnerable to attack.
+  - *Wave 1* - The space station fires volleys of bullets to deter the 
+    player and attempt to defeat him. The station is only vulnerable every 5 
+    seconds as it vents heat. There are three stages, increasing in 
+    difficulty until this wave is completed. 
 
 ## Limitation
 
